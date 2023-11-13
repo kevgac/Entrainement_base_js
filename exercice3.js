@@ -26,7 +26,7 @@ let isPalindrome = function(x) {
 
 
 // solution 2
-
+/*
 let isPalindrome = function(x) {
     if(x < 0){
         return false;
@@ -36,7 +36,7 @@ let isPalindrome = function(x) {
 
     return normal === reversed;
 }
-
+*/
 
 
 console.log(isPalindrome(121));
