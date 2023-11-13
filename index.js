@@ -1,17 +1,8 @@
-console.log("Hello World");
 const numbers = [1, 2, 3, 4, 5];
 
 for(let i = 0; i < numbers.length; i++){
     console.log(numbers[i]);
 }
-
-// foreach (es5)
-/*
-nuumbers.forEach(function (num){
-    console.log(num);
-});
-*/
-
 
 // foreach (es6)
 numbers.forEach(num => console.log(num));
@@ -61,12 +52,14 @@ while(indx != -1){
 }
 console.log(index);
 
-
 console.log("***********************");
 
 //find -> renvoi la valeur du premier élément qui match avec la condition fournie
 const found = legumes.find(legume => legume === "haricots");
 console.log(found);
+
+console.log("***********************");
+
 
 
 
