@@ -25,6 +25,39 @@ output = 1994
 */
 
 
+
+
+// solution 1
+let romanToInt = function(string) {
+  const sym = {
+    "I": 1,
+    "V": 5, 
+    "X": 10,
+    "L": 50,
+    "C": 100,
+    "D": 500,
+    "M" : 1000
+  }
+
+  let result = 0;
+
+  for(let i =0; i<string.length; i++){
+    const curr = sym[string[i]];
+    const next = sym[string[i+1]];
+
+    if(curr < next){
+      result += next - curr;
+      i++;
+    }
+    else{
+      result += curr;
+    }
+  }
+  return result;
+}
+
+// solution 2
+/*
 let romanToInt = function(string) {
   const MapRoman = new Map([
     ["I", 1],
@@ -46,7 +79,7 @@ let romanToInt = function(string) {
   }
   return result;
 }
-
+*/
 console.log(romanToInt("III"));      // Output: 3
 console.log(romanToInt("LVIII"));    // Output: 58
 console.log(romanToInt("MCMXCIV"));  // Output: 1994
