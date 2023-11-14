@@ -14,7 +14,7 @@ console.log(tab1);
 console.log(tab2);
 console.log(tabSort(tab1, tab2));
 
-
+console.log("------------------");
 console.log("Exo 2 :");
 /*
     Ecrire une fonction qui va prendre en paramètre un nombre et retourne la somme de tous les multiples de 5 jusqu'à n.
@@ -30,7 +30,7 @@ let sumMultiple = function (n){
 }
 console.log(sumMultiple(10));
 
-
+console.log("------------------");
 console.log("Exo 3 :");
 /*
     Ecrire une fonction qui va prendre en paramètre un tableau d'entier et qui supprime les doublons (ne pas utiliser d'autre tableau, uniquement celui passé en paramètre)
@@ -50,18 +50,11 @@ let removeDuplicate = function (tab){
 console.log(tab);
 console.log(removeDuplicate(tab));
 
-
-
+console.log("------------------");
 console.log("Exo 4 :");
 /*
     Imaginez une liste de membre d'un club de foot. Chaque membre à (id, nom, age, actif).
-
-    - Ecrire une fonction qui prends en param un tableau de membres, un nouveau membre et ajoute ce membre à la fin du tableau.(attention l'id devra etre unique)
-
-    - Ecrire une fonction qui prends en param un tableau de membres et supprime tous les membres inactifs.
-
-    - Ecrire une fonction qui prends en param un tableau de membres et le nom d'un membre. Afin de retourner le membre trouvé si il existe.
-*/
+*/  
 let membres = [
     {
         id: 1,
@@ -82,11 +75,12 @@ let membres = [
         actif: true
     }
 ];
-
 console.log(membres);
-
 console.log("------------------");
 
+/*
+    Ecrire une fonction qui prends en param un tableau de membres, un nouveau membre et ajoute ce membre à la fin du tableau.(attention l'id devra etre unique)
+*/
 let addMembre = function (membres, mewMembre){
     let id = membres.length + 1;
     mewMembre.id = id;
@@ -95,17 +89,20 @@ let addMembre = function (membres, mewMembre){
     return membres;
 }
 console.log(addMembre(membres, {nom: "Milan", age: 23, actif: true}));
-console.log(membres);
-
 console.log("------------------");
 
+/*
+    Ecrire une fonction qui prends en param un tableau de membres et supprime tous les membres inactifs.
+*/
 let removeMembreInactif = function (membres){
     return membres.filter(membre => membre.actif === true);
 }
 console.log("Voici tous les membres actifs :\n",removeMembreInactif(membres));
-
 console.log("------------------");
 
+/*
+    Ecrire une fonction qui prends en param un tableau de membres et le nom d'un membre. Afin de retourner le membre trouvé si il existe.
+*/
 let findMembre = function (membres, nom){
     return membres.find(membre => membre.nom === nom);
 }
